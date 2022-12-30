@@ -2,8 +2,8 @@ syntax = "proto3";
 package auth;
 option go_package="./authentication";
 service AuthService{
-    rpc HasAccess(Resource) returns(Access);
-    rpc GetUser(JsonWebToken) returns(User);
+    rpc HasAccess(Resource) returns(Access) {};
+    rpc GetUser(JsonWebToken) returns(User) {};
 }
 
 message JsonWebToken {
