@@ -2,10 +2,11 @@ package main
 import (
 	"flag"
 	"github.com/gin-gonic/gin"
+	// "net/http"
 )
 func main(){
-	authaddr:=flag.string("authAddr","localhost:50051","Authentication service address (GRPC)")
-	prodaddr:=flag.string("prodAddr","localhost:50052","Product service address (GRPC)")
+	authaddr := flag.string("authAddr","localhost:50051","Authentication service address (GRPC)")
+	prodaddr := flag.string("prodAddr","localhost:50052","Product service address (GRPC)")
 
 	flag.Parse()
 	svc:=NewInmemservice(*prodaddr)
